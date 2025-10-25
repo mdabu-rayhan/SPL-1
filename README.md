@@ -1,42 +1,55 @@
 # 🧱 User-Space Firewall with Real-Time Network Monitoring
 
 ## 📘 Overview
-This project implements a **user-space firewall and network monitoring system** using **C/C++**.  
-It captures and analyzes **live network packets** through `libpcap`, applies **rule-based filtering**, and classifies packets as **allowed, blocked, or suspicious**.  
-The system also integrates a **lightweight Intrusion Detection System (IDS)** to identify repeated or potentially malicious network behaviors such as **port scanning or multiple connection attempts**.
+This project is a **user-space network monitoring and firewall system** built in **C/C++**, designed to **capture, analyze, and filter network traffic in real time**.  
+It provides a **production-level architecture** for packet **inspection**, **decision-making (allow, block, or suspicious)**, and **system-level network monitoring** using **rule-based filtering and pattern detection**.
 
-The main goal of this project is to develop a **learning-oriented simulation** of firewall and IDS behavior that operates entirely in **user-space**, without requiring kernel-level programming.  
-
-In the future, this project aims to evolve into a **production-level firewall and real-time monitoring system**, capable of advanced packet inspection, rule automation, and scalable network defense.
+The project also integrates a **lightweight Intrusion Detection System (IDS)** to identify suspicious behaviors such as repeated access attempts, port scans, or abnormal packet rates.  
+It is ideal for **research**, **security learning**, or as a **prototype for enterprise-grade network protection**.
 
 ---
 
-## 🚀 Features
-- **Live Packet Capture:** Monitors real-time traffic from selected network interfaces using `libpcap`.  
-- **Rule-Based Filtering:** Applies user-defined `ALLOW` or `BLOCK` rules from `rules.txt` based on IP, port, or protocol.  
-- **Intrusion Detection (IDS):** Detects suspicious patterns such as repeated access or port scans.  
-- **Logging System:** Records all packet activities and firewall decisions with timestamps in `firewall_log.txt`.  
-- **Command-Line Interface (CLI):** Allows users to manage capture sessions, view logs, and reload rule sets.  
-- **Simulation Mode:** Displays real-time firewall actions in a clear and informative terminal view.
+## 🚀 Key Features
+- **🔍 Real-Time Packet Capture:** Uses `libpcap` for live traffic capture at the system level.  
+- **🧠 Intelligent Analysis:** Extracts headers and metadata to identify protocol, IPs, and ports.  
+- **🧩 Rule-Based Filtering:** Supports custom `ALLOW` and `BLOCK` rules via a configuration file (`rules.txt`).  
+- **🚨 Intrusion Detection System (IDS):** Detects repetitive IP hits, port scans, or suspicious packet patterns.  
+- **🖥️ System-Level Monitoring:** Provides packet statistics, traffic summaries, and active connections in real-time.  
+- **📊 Logging & Alerting:** Logs all actions (allowed, blocked, suspicious) with timestamps for audit and debugging.  
+- **💻 CLI Control Panel:** Command-based interface to manage capture sessions, load new rules, and monitor traffic interactively.  
 
 ---
 
-## ⚙️ System Architecture
-1. **Packet Capture Module** – Captures live packets and extracts relevant fields (IP, protocol, port).  
-2. **Rule Matching Engine** – Compares packets against `rules.txt` entries for filtering decisions.  
-3. **Simulation & Logging Module** – Displays `[ALLOW]`, `[BLOCK]`, and `[SUSPICIOUS]` packets with timestamps, and logs them.  
-4. **Intrusion Detection System (IDS)** – Monitors traffic frequency from IPs and triggers alerts for repeated or abnormal access attempts.  
-5. **CLI Controller** – Provides a text-based interface for managing captures, viewing logs, and reloading rules.
+## ⚙️ System Workflow
+1. **Packet Capture Layer**  
+   - Captures live packets using `libpcap` or Npcap (on Windows).  
+   - Extracts IP, ports, protocol, and packet size.  
+   - Passes metadata to the Analysis Engine.  
+   - ~250–300 lines of C/C++ code.
 
----
+2. **Packet Analysis & Decision Engine**  
+   - Parses packet headers and applies decision logic.  
+   - Matches packets against `rules.txt`.  
+   - Supports dynamic actions: `ALLOW`, `BLOCK`, or `SUSPICIOUS`.  
+   - Includes a traffic frequency tracker for anomaly detection.  
+   - ~400–500 lines of code.
 
-## ⚡ Future Expansion Plan
-The next phase of this project will focus on transforming this simulator into a **fully functional production-grade firewall and monitoring suite**, including:
-- Multi-threaded packet capture and rule processing.  
-- Dynamic rule updates and real-time reconfiguration.  
-- Advanced traffic analytics and visualization.  
-- Encrypted log storage and blockchain-based log verification.  
-- Cross-platform support and service deployment capabilities.
+3. **Intrusion Detection (IDS) Module**  
+   - Detects repetitive packet patterns or sudden traffic spikes.  
+   - Flags IPs performing multiple failed attempts or unusual port activity.  
+   - Generates alerts and logs for suspicious traffic.  
+   - ~250 lines of code.
+
+4. **Monitoring & Logging System**  
+   - Records all firewall actions and IDS alerts to `firewall_log.txt`.  
+   - Displays real-time summary: total, allowed, blocked, and suspicious packets.  
+   - Offers traffic statistics (packets/sec, bytes/sec).  
+   - ~200 lines of code.
+
+5. **CLI Controller**  
+   - Menu-based control (start/stop capture, reload rules, view stats).  
+   - Can display recent logs or live traffic feed.  
+   - ~150–200 lines of code.
 
 ---
 
