@@ -5,8 +5,7 @@ This project is a **user-space network monitoring and firewall system** built in
 
 It provides a **production-level architecture** for packet **inspection**, **decision-making (allow, block, or suspicious)**, and **system-level network monitoring** using **rule-based filtering and pattern detection**.
 
-The project also integrates a **lightweight Intrusion Detection System (IDS)** to identify suspicious behaviors such as repeated access attempts, port scans, or abnormal packet rates.  
-It is ideal for **research**, **security learning**.
+The project also integrates a **lightweight Intrusion Detection System (IDS)** to identify suspicious behaviors such as repeated access attempts, port scans, or abnormal packet rates. It is ideal for **research**, **security learning**.
 
 ---
 
