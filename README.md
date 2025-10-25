@@ -25,31 +25,26 @@ The project also integrates a **lightweight Intrusion Detection System (IDS)** t
    - Captures live packets using `libpcap` or Npcap (on Windows).  
    - Extracts IP, ports, protocol, and packet size.  
    - Passes metadata to the Analysis Engine.  
-   - ~250–300 lines of C/C++ code.
 
 2. **Packet Analysis & Decision Engine**  
    - Parses packet headers and applies decision logic.  
    - Matches packets against `rules.txt`.  
    - Supports dynamic actions: `ALLOW`, `BLOCK`, or `SUSPICIOUS`.  
    - Includes a traffic frequency tracker for anomaly detection.  
-   - ~400–500 lines of code.
 
 3. **Intrusion Detection (IDS) Module**  
    - Detects repetitive packet patterns or sudden traffic spikes.  
    - Flags IPs performing multiple failed attempts or unusual port activity.  
    - Generates alerts and logs for suspicious traffic.  
-   - ~250 lines of code.
 
 4. **Monitoring & Logging System**  
    - Records all firewall actions and IDS alerts to `firewall_log.txt`.  
    - Displays real-time summary: total, allowed, blocked, and suspicious packets.  
    - Offers traffic statistics (packets/sec, bytes/sec).  
-   - ~200 lines of code.
 
 5. **CLI Controller**  
    - Menu-based control (start/stop capture, reload rules, view stats).  
    - Can display recent logs or live traffic feed.  
-   - ~150–200 lines of code.
 
 ---
 
