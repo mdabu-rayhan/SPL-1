@@ -1,15 +1,25 @@
-CC = gcc
-CFLAGS = -Wall -g
-LIBS = -lpcap
+CXX = g++
+CXXFLAGS = -std=c++17 -O2 -Wall -pthread
 
-SRC = src/main.cpp src/capture.cpp src/rules.cpp src/firewall.cpp src/ids.cpp src/logger.cpp src/util.cpp
-OBJ = $(SRC:.cpp=.o)
-TARGET = firewall_sim
+SRC_DIR = src
+INC_DIR = include
+
+SRCS = $(SRC_DIR)/main.cpp \
+       $(SRC_DIR)/packet_capture.cpp \
+       $(SRC_DIR)/rule_engine.cpp \
+       $(SRC_DIR)/ids.cpp \
+       $(SRC_DIR)/blockchain.cpp \
+       $(SRC_DIR)/logger.cpp \
+       $(SRC_DIR)/stats.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+TARGET = firewall
 
 all: $(TARGET)
 
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ) $(LIBS)
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -o $@ $^
 
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJS) $(TARGET)
