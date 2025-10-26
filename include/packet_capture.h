@@ -1,14 +1,12 @@
-#include "util.h"
+#pragma once
+#include "utils.h"
+#include <string>
+using namespace std;
 
-/*
- * start_capture(interface)
- *   Opens the interface using libpcap and starts capture loop in current thread.
- *   Returns 0 on success, -1 on failure.
- */
-int start_capture(const char *interface);
-
-/*
- * stop_capture()
- *   Stop the capture loop and close resources.
- */
-void stop_capture(void);
+namespace PacketCapture
+{
+    // start simulated capture in a blocking call; returns when stopped
+    void startCapture(const string &iface);
+    // stop capture by setting global flag (main uses running flag)
+    void stopCapture();
+}
