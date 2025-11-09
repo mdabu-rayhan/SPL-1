@@ -8,8 +8,8 @@ The core idea of this project is to develop a C++-based **user-space** network m
 ## Key Features
 - **Packet capture and traffic analysis:** Captures live packets using `raw sockets` or `libpcap`. Extracts layer 3 and Layer 4 headers (IP, Port, Protocol) and classifies packets as inbound, outbound, or local.  
 - **Firewall Engine:** Implements rule-based filtering to `allow`, `block`, or monitor packets based on IP, Ports, or Protocol. Every decision is logged in real time.  
-- **Intrusion Detection:** Maintains a suspicious flow table to identify potential **Port scans** and **DoS patterns** using timestamp-based frequency counter.  
-- **Block chain-Secured Logging:** Network event are securely stored as linked blocks, each containing a timestamp, event data, and the previous block’s hash. Implement  **SHA-256** hashing for block validation, ensuring tamper-proof and immutable logs chains.    
+- **Intrusion Detection:** Maintains a suspicious flow table to identify potential `Port scans` and `DoS patterns` using timestamp-based frequency counter.  
+- **Block chain-Secured Logging:** Network event are securely stored as linked blocks, each containing a timestamp, event data, and the previous block’s hash. Implement  `SHA-256` hashing for block validation, ensuring tamper-proof and immutable logs chains.    
 - **Real-Time Terminal Dashboard:** Displays live packets `ststistics` (total, allowed, blocked, suspicious). Shows IDS `alerts` and block-chain update dynamically.  
 - **Modular Architecture:** 6.Designed with independent modules (Capture, Firewall, IDS, Logger, Block chain), enabling re-usability, maintainability and future extensibility.    
 
