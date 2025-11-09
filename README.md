@@ -1,28 +1,23 @@
-# 🧱 User-Space Firewall with Real-Time Network Monitoring
+# User-Space Firewall with Real-Time Network Monitoring
 
-## 📘 Overview
-This project is a **user-space network monitoring and firewall system** built in **C/C++**, designed to **capture, analyze, and filter network traffic in real time**.  
-
-It provides a **production-level architecture** for packet **inspection**, **decision-making (allow, block, or suspicious)**, and **system-level network monitoring** using **rule-based filtering and pattern detection**.
-
-The project also integrates a **lightweight Intrusion Detection System (IDS)** to identify suspicious behaviors such as repeated access attempts, port scans, or abnormal packet rates. It is ideal for **research**, **security learning**.
+## Project Description
+The core idea of this project is to develop a C++-based **user-space** network monitoring system that captures **live packets**, detects **layer-4 intrusions** (like DoS), and securely logs all events using a **block chain-based hashing** mechanism for integrity...
 
 ---
 
-## 🚀 Key Features
-- **🔍 Real-Time Packet Capture:** Uses `libpcap` for live traffic capture at the system level.  
-- **🧠 Intelligent Analysis:** Extracts headers and metadata to identify protocol, IPs, and ports.  
-- **🧩 Rule-Based Filtering:** Supports custom `ALLOW` and `BLOCK` rules via a configuration file (`rules.txt`).  
-- **🚨 Intrusion Detection System (IDS):** Detects repetitive IP hits, port scans, or suspicious packet patterns.  
-- **🖥️ System-Level Monitoring:** Provides packet statistics, traffic summaries, and active connections in real-time.  
-- **📊 Logging & Alerting:** Logs all actions (allowed, blocked, suspicious) with timestamps for audit and debugging.  
-- **💻 CLI Control Panel:** Command-based interface to manage capture sessions, load new rules, and monitor traffic interactively.  
+## Key Features
+- **Packet capture and traffic analysis:** Captures live packets using `raw sockets` or `libpcap`. Extracts layer 3 and Layer 4 headers (IP, Port, Protocol) and classifies packets as inbound, outbound, or local.  
+- **Firewall Engine:** Implements rule-based filtering to `allow`, `block`, or monitor packets based on IP, Ports, or Protocol. Every decision is logged in real time.  
+- **Intrusion Detection:** Maintains a suspicious flow table to identify potential **Port scans** and **DoS patterns** using timestamp-based frequency counter.  
+- **Block chain-Secured Logging:** Network event are securely stored as linked blocks, each containing a timestamp, event data, and the previous block’s hash. Implement  **SHA-256** hashing for block validation, ensuring tamper-proof and immutable logs chains.    
+- **Real-Time Terminal Dashboard:** Displays live packets `ststistics` (total, allowed, blocked, suspicious). Shows IDS `alerts` and block-chain update dynamically.  
+- **Modular Architecture:** 6.Designed with independent modules (Capture, Firewall, IDS, Logger, Block chain), enabling re-usability, maintainability and future extensibility.    
 
 ---
 
-## ⚙️ System Workflow
+## System Workflow
 1. **Packet Capture Layer**  
-   - Captures live packets using `libpcap` or Npcap (on Windows).  
+   - Captures live packets using `libpcap` or raw sockets.  
    - Extracts IP, ports, protocol, and packet size.  
    - Passes metadata to the Analysis Engine.  
 
@@ -48,9 +43,9 @@ The project also integrates a **lightweight Intrusion Detection System (IDS)** t
 
 ---
 
-## 🛠️ Requirements
-- **Programming Language:** C / C++  
-- **Library:** `libpcap`  
+## Requirements
+- **Programming Language:** C++  
+- **Library:** `stdio`, `stdlib`, `ctime`, `string`, `fstream`, `thread`, `libcap` etc.  
 - **Compiler:** GCC / G++  
-- **Operating System:** Linux or Windows (with Npcap/WinPcap)
+- **Operating System:** Linux 
 
