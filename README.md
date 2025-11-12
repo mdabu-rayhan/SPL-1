@@ -1,4 +1,5 @@
-# User-Space Real-Time Network Monitoring
+# User-Space Defensive Security Monitoring System
+
 
 ## Project Description
 The core idea of this project is to develop a C++-based **user-space** network monitoring system that captures **live packets**, detects **layer-4 intrusions** (like DoS), and securely logs all events using a **block chain-based hashing** mechanism for integrity...
