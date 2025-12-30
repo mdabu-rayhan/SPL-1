@@ -1,25 +1,30 @@
+# Minimal Makefile for main.cpp + packet_capture_manual_decoding.cpp
 CXX = g++
-CXXFLAGS = -std=c++17 -O2 -Wall -pthread
+CXXFLAGS = -std=c++17 -Wall -Wextra -g3 -Iinclude -pthread
+LDFLAGS = -lpcap
 
-SRC_DIR = src
-INC_DIR = include
+SRCDIR = src
+BINDIR = src/output
+TARGET = $(BINDIR)/main
 
-SRCS = $(SRC_DIR)/main.cpp \
-       $(SRC_DIR)/packet_capture.cpp \
-       $(SRC_DIR)/rule_engine.cpp \
-       $(SRC_DIR)/ids.cpp \
-       $(SRC_DIR)/blockchain.cpp \
-       $(SRC_DIR)/logger.cpp \
-       $(SRC_DIR)/stats.cpp
-
+SRCS = $(SRCDIR)/main.cpp $(SRCDIR)/packet_capture_manual_decoding.cpp $(SRCDIR)/firewall.cpp $(SRCDIR)/stats.cpp
 OBJS = $(SRCS:.cpp=.o)
 
-TARGET = firewall
+.PHONY: all clean run
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -o $@ $^
+$(TARGET): $(OBJS) | $(BINDIR)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+$(SRCDIR)/%.o: $(SRCDIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(BINDIR):
+	mkdir -p $(BINDIR)
+
+run: all
+	sudo ./$(TARGET)
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(SRCDIR)/*.o $(TARGET)
