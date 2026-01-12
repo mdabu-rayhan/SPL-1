@@ -7,7 +7,7 @@ using namespace std;
 struct Rule
 {
     string action; // "ALLOW" or "BLOCK"
-    string proto;  // "TCP","UDP","ICMP","ANY"
+    string proto;  
     string ip;     // ip or "*"
     int port;      // 0 means any
 };

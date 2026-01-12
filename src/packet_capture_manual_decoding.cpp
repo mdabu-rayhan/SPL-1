@@ -35,7 +35,7 @@ Packet parseRaw(const u_char* packet, int len) {
             chrono::system_clock::now().time_since_epoch()
         ).count();
 
-    // ---- Ethernet ----
+    // Ethernet 
     uint16_t ethertype = read_u16(packet + 12);
     if (ethertype != 0x0800) {
         pkt.protocol = "OTHER";
@@ -64,19 +64,19 @@ Packet parseRaw(const u_char* packet, int len) {
 
     const u_char* transport = ip + ip_header_len;
 
-    // ---- TCP ----
+    // TCP
     if (protocol == 6) {
         pkt.protocol = "TCP";
         pkt.srcPort = read_u16(transport);
         pkt.dstPort = read_u16(transport + 2);
 
-    // ---- UDP ----
+    // UDP 
     } else if (protocol == 17) {
         pkt.protocol = "UDP";
         pkt.srcPort = read_u16(transport);
         pkt.dstPort = read_u16(transport + 2);
 
-    // ---- ICMP ----
+    // ICMP 
     } else if (protocol == 1) {
         pkt.protocol = "ICMP";
         pkt.srcPort = 0;
@@ -125,5 +125,3 @@ void stopCapture() {
     if (global_handle)
         pcap_breakloop(global_handle);
 }
-
-//see chat history which name is "Packet capture and manual decoding in C++"

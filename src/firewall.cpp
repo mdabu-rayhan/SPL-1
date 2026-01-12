@@ -10,11 +10,11 @@
 
 using namespace std;
 
-// ---------------- Global variables ----------------
-vector<Rule> rules;         // Firewall rules
+// Global variables 
+vector<Rule> rules;         
 mutex ruleLock;             // Protect rules vector
 
-// ---------------- Load rules from file ----------------
+// Load rules from file
 bool loadRules(const string &path) {
     lock_guard<mutex> guard(ruleLock);
 
@@ -48,9 +48,9 @@ bool loadRules(const string &path) {
     return true;
 }
 
-// ---------------- Helper functions ----------------
+// Helper functions
 static bool matchIP(const string &ruleIP, const Packet &p) {
-    // Match rule IP with either src or dst
+    // Match IP
     return (ruleIP == "*" || ruleIP == p.srcIP || ruleIP == p.dstIP);
 }
 
@@ -62,7 +62,7 @@ static bool matchPort(int rulePort, int pktPort) {
     return (rulePort == 0 || rulePort == pktPort);
 }
 
-// ---------------- Evaluate packet ----------------
+// Evaluate packet
 Decision evaluatePacket(const Packet &p) {
     lock_guard<mutex> guard(ruleLock);
 

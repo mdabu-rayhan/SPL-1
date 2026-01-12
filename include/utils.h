@@ -6,9 +6,9 @@ struct Packet
 {
     string srcIP;
     string dstIP;
-    string protocol; // "TCP", "UDP", "ICMP", "OTHER"
+    string protocol; 
     int srcPort;
     int dstPort;
-    int size; // bytes
+    int size; 
     long long timestamp_ms;
 };

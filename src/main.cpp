@@ -1,7 +1,6 @@
-// ...existing code...
 #include <iostream>
 #include <thread>
-// replace the .cpp include with the header
+
 #include "../include/packet_capture_manual.h"
 #include "../include/firewall.h"
 #include "../include/stats.h"
@@ -15,17 +14,17 @@ void stopCapture();
 
 int main() {
     
-    const char* device = "lo";   // or "wlan0"
+    const char* device = "eth0";   // or "wlan0" / eth0
 
-    // Run sniffer in a separate thread
+    // Run sniffer
     thread captureThread([&]() {
         startCapture(device);
     });
 
     cout << "Press" << RED << " ENTER " << RESET << "to stop capturing...\n";
-    cin.get();   // Wait for user input
+    cin.get();   
 
-    stopCapture();     // Stop packet loop
+    stopCapture();     
     captureThread.join();
 
     cout<< GREEN << "\n                                Program finished.\n" << RESET;
