@@ -1,12 +1,45 @@
+# =========================================================
+# FIREWALL RULE SET - FINAL CONFIGURATION
+# Policy: FIRST MATCH WINS (Default Deny)
 # Format: ACTION PROTO IP PORT
-# ACTION: ALLOW or BLOCK
-# PROTO: TCP UDP ICMP ANY
-# IP: exact or '*' wildcard
-# PORT: 0 = any
+# =========================================================
 
-BLOCK ICMP * 0
-BLOCK TCP 10.0.0.22 0
-ALLOW TCP * 80
-ALLOW TCP * 443
-ALLOW UDP * 53
-ALLOW UDP 127.0.0.1 0
+# SECTION 1: EMERGENCY INCIDENT RESPONSE (Highest Priority)
+# Simulating a blocked attack. These MUST be at the top.
+BLOCK TCP 192.168.1.55 0     # Blocked: Suspicious IP (Mock Incident)
+BLOCK UDP 45.33.22.11 0      # Blocked: Botnet C&C
+BLOCK TCP * 23               # Blocked: Telnet (Insecure)
+BLOCK TCP * 445              # Blocked: SMB (Ransomware protection)
+
+# SECTION 2: SYSTEM CRITICAL (Do Not Remove)
+# Essential for your own computer to function.
+ALLOW UDP 127.0.0.1 0        # Localhost Loopback (UDP)
+ALLOW TCP 127.0.0.1 0        # Localhost Loopback (TCP)
+BLOCK ICMP * 0               # Block Ping (Stealth Mode)
+
+# SECTION 3: CORE INTERNET SERVICES 
+ALLOW UDP * 53               # DNS (Domain Name System)
+ALLOW UDP * 67               # DHCP (IP Address Assignment)
+ALLOW UDP * 68               # DHCP (IP Address Assignment)
+ALLOW UDP * 123              # NTP (Time Sync)
+
+# SECTION 4: WEB & REMOTE ACCESS 
+ALLOW TCP * 80               # HTTP (Unsecured Web)
+ALLOW TCP * 443              # HTTPS (Secured Web)
+ALLOW TCP * 22               # SSH (Secure Shell)
+ALLOW TCP * 3389             # RDP (Remote Desktop)
+
+# SECTION 5: EMAIL SERVICES 
+ALLOW TCP * 25               # SMTP (Mail Send)
+ALLOW TCP * 587              # SMTP (Secure Send)
+ALLOW TCP * 993              # IMAPS (Secure Receive)
+
+# SECTION 6: DEVELOPMENT & DATABASES 
+ALLOW TCP * 3306             # MySQL / MariaDB
+ALLOW TCP * 5432             # PostgreSQL
+ALLOW TCP * 8080             # Alternative Web Port
+ALLOW TCP * 3000             # Node/React Dev Server
+
+# SECTION 7: CATCH-ALL (The "Default Deny") 
+# Any packet not matched above is dropped here.
+BLOCK ANY * 0                # IMPLICIT DENY ALL
