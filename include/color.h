@@ -3,3 +3,4 @@
 #define YELLOW "\033[33m"
 #define CYAN   "\033[36m"
 #define RESET  "\033[0m"
+#define BOLD   "\033[1m"

@@ -8,6 +8,7 @@
 #include "../include/packet.h"
 #include "../include/packet_capture_manual.h"
 #include "../include/firewall.h"
+#include "../include/ids.h"
 #include "../include/stats.h"
 #include "../include/color.h"
 
@@ -93,17 +94,34 @@ Packet parseRaw(const u_char* packet, int len) {
 void packetHandler(u_char*, const pcap_pkthdr* header, const u_char* packet) {
     Packet pkt = parseRaw(packet, header->len);
 
+    // 1. Run Firewall Checks
     Decision d = evaluatePacket(pkt);
 
+
+    // 2. Run IDS (DoS Detection)
+    bool isDoS = IDS::analyze(pkt);
+
+
+    // 3. Override Firewall decision if IDS detects an attack
+    if (isDoS) {
+        d.allowed = false;
+        d.rule = "DoS DETECTED";
+    }
+
+    // 4. Log the packet
     printPacketLog(pkt, d);
-        //cout<<"Rayhan"<<endl;
+
 }
 
 void startCapture(const char* device) {
 
     // Initialize firewall & stats
-    loadRules("/home/kali/Desktop/SPL-1/data/rules.txt");
-    initUI();
+    //loadRules("/home/kali/Desktop/SPL-1/data/rules.txt");
+    if (!loadRules("/home/kali/Desktop/SPL-1/data/rules.txt")) { 
+         cerr << RED << "Failed to load rules! Defaulting to deny all." << RESET << endl;
+    }
+    initUI(); // Initialize Stats UI
+    IDS::init(); //Initialize IDS
 
     char errbuf[PCAP_ERRBUF_SIZE];
     global_handle = pcap_open_live(device, 65535, 1, 1000, errbuf);

@@ -2,6 +2,7 @@
 #include "../include/color.h"
 #include <iostream>
 
+
 using namespace std;
 
 // Clear entire line
@@ -23,7 +24,12 @@ void printPacketLog(const Packet &p, const Decision &d) {
     // Move to new line
     cout << CLEAR_LINE << "\r";
 
-    if (d.rule == "NO MATCH") {
+
+    if (d.rule == "DoS DETECTED") {
+        blocked++;
+        cout << RED << "[ALERT] " << BOLD << "DoS ATTACK " << RESET;
+    }
+    else if (d.rule == "NO MATCH") {
         suspicious++;
         cout << YELLOW << "[SUSPICIOUS] " << RESET;
     }

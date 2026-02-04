@@ -7,7 +7,7 @@ SRCDIR = src
 BINDIR = src/output
 TARGET = $(BINDIR)/main
 
-SRCS = $(SRCDIR)/main.cpp $(SRCDIR)/packet_capture_manual_decoding.cpp $(SRCDIR)/firewall.cpp $(SRCDIR)/stats.cpp
+SRCS = $(SRCDIR)/main.cpp $(SRCDIR)/packet_capture_manual_decoding.cpp $(SRCDIR)/firewall.cpp $(SRCDIR)/stats.cpp $(SRCDIR)/ids.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 .PHONY: all clean run

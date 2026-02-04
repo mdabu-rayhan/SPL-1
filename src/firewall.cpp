@@ -44,7 +44,7 @@ bool loadRules(const string &path) {
         rules.push_back(r);
     }
 
-    cout << "Firewall Rules loaded " << GREEN << rules.size() << RESET << " rules\n";
+    cout << "[Firewall]" << GREEN << " Rules loaded " << RED << rules.size() << GREEN << " rules\n" << RESET;
     return true;
 }
 

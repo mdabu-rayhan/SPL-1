@@ -14,7 +14,10 @@ void stopCapture();
 
 int main() {
     
-    const char* device = "eth0";   // or "wlan0" / eth0
+    char device[100]; // = "eth0";   // or "wlan0" / eth0
+    cout << CYAN << "Enter Network Interface: " << RESET;
+    cin.getline(device, sizeof(device));
+
 
     // Run sniffer
     thread captureThread([&]() {
