@@ -27,7 +27,7 @@ void printPacketLog(const Packet &p, const Decision &d) {
 
     if (d.rule == "DoS DETECTED") {
         blocked++;
-        cout << RED << "[ALERT] " << BOLD << "DoS ATTACK " << RESET;
+        cout << RED << BOLD << "[ALERT]    "<< "DoS ATTACK " << RESET;
     }
     else if (d.rule == "NO MATCH") {
         suspicious++;

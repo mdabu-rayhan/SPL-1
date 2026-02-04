@@ -71,6 +71,10 @@ Packet parseRaw(const u_char* packet, int len) {
         pkt.srcPort = read_u16(transport);
         pkt.dstPort = read_u16(transport + 2);
 
+        if (transport[13] & 0x04) {
+            pkt.protocol = "IGNORE"; // Ignore outgoing reset packets
+        }
+
     // UDP 
     } else if (protocol == 17) {
         pkt.protocol = "UDP";
@@ -83,6 +87,13 @@ Packet parseRaw(const u_char* packet, int len) {
         pkt.srcPort = 0;
         pkt.dstPort = 0;
 
+        uint8_t icmp_type = transport[0];
+
+        if (icmp_type == 0 || icmp_type == 3) {
+            pkt.protocol = "IGNORE"; // Ignore outgoing echo replies & dest unreachable
+        }
+
+
     } else {
         pkt.protocol = "OTHER";
     }
@@ -94,8 +105,17 @@ Packet parseRaw(const u_char* packet, int len) {
 void packetHandler(u_char*, const pcap_pkthdr* header, const u_char* packet) {
     Packet pkt = parseRaw(packet, header->len);
 
+    if (pkt.protocol == "IGNORE") {
+        return;
+    }
+
     // 1. Run Firewall Checks
     Decision d = evaluatePacket(pkt);
+
+    if (!d.allowed) {
+        printPacketLog(pkt, d);
+        return; 
+    }
 
 
     // 2. Run IDS (DoS Detection)
@@ -106,6 +126,8 @@ void packetHandler(u_char*, const pcap_pkthdr* header, const u_char* packet) {
     if (isDoS) {
         d.allowed = false;
         d.rule = "DoS DETECTED";
+
+        blockIP(pkt.srcIP);
     }
 
     // 4. Log the packet

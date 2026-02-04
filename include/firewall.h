@@ -20,3 +20,5 @@ struct Decision {
 bool loadRules(const string &path);
 Decision evaluatePacket(const Packet &p);
 
+void blockIP(const string &ip);
+

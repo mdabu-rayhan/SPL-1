@@ -56,3 +56,7 @@ namespace IDS {
         return false;
     }
 }
+
+
+// for tesing ids manually send manual packets using this cmd
+// sudo hping3 -c 1500 -i u500 -I lo 127.0.0.1
