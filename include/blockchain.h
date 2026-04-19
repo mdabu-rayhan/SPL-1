@@ -16,5 +16,6 @@ namespace Blockchain
 {
     void init();
     void addBlock(const string &data);
+    bool verifyChain();
     int size();
 }

@@ -79,28 +79,25 @@ Decision evaluatePacket(const Packet &p) {
     return { false, "NO MATCH" };
 }
 
-
 void blockIP(const string &ip) {
     lock_guard<mutex> guard(ruleLock);
 
-    
     for (const auto &r : rules) {
         if (!r.allow && r.ip == ip && r.proto == "ANY") {
             return; 
         }
     }
 
-    
     Rule r;
     r.allow = false;      
     r.proto = "ANY";      
     r.ip = ip;            
     r.port = 0;           
-    r.raw = "DYNAMIC BLOCK (DoS DETECTED)";
+    r.raw = "DYNAMIC BLOCK (IDS ALERT)"; // Ekhane change kora holo
 
     rules.insert(rules.begin(), r);
 
     cout << "\033[2K\r";
-
-    cout << BOLD << "[Firewall] " << RED << "BLOCKED IP: " << ip << " due to DoS Attack!" << RESET << endl;
+    // Nicher print message ti generic kora holo
+    cout << BOLD << "[Firewall] " << RED << "BLOCKED IP: " << ip << " due to Malicious Activity!" << RESET << endl;
 }

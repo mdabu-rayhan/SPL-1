@@ -1,3 +1,4 @@
+// src/ids.cpp er update
 #include "../include/ids.h"
 #include <iostream>
 #include <map>
@@ -9,15 +10,21 @@ using namespace std;
 
 namespace IDS {
 
-    const int DOS_THRESHOLD = 1000; // packets per second
-    const int TIME_WINDOW_MS = 1000; // 1 second
+    const int DOS_THRESHOLD = 1000;      // 1 second e 1000 packet
+    const int PORT_SCAN_THRESHOLD = 20;  // 1 second e 20+ unique port
+    const int TIME_WINDOW_MS = 1000;     // Time window 1 second
 
-    
-    struct Flow {
-        deque<long long> timestamps;
+    // Packet er timestamp abong port eksathe rakhar jonno struct
+    struct PacketData {
+        long long timestamp;
+        int port;
     };
 
-    
+    struct Flow {
+        deque<PacketData> history;
+        map<int, int> port_counts; // Kon port e koyta request asche tar hishab
+    };
+
     map<string, Flow> flowTable;
     mutex idsLock;
 
@@ -29,34 +36,45 @@ namespace IDS {
         cout << "[IDS] " << YELLOW << "Shutting down Intrusion Detection System" << RESET << endl;
     }
 
-    
     bool analyze(const Packet &p) {
         lock_guard<mutex> guard(idsLock);
-
-        
         Flow &f = flowTable[p.srcIP];
 
-        {
-            f.timestamps.push_back(p.timestamp_ms);
+        // 1. Notun packet add kora hocche
+        f.history.push_back({p.timestamp_ms, p.dstPort});
+        f.port_counts[p.dstPort]++; 
 
-            long long cutoff = p.timestamp_ms - TIME_WINDOW_MS;
-            while (!f.timestamps.empty() && f.timestamps.front() < cutoff) {
-            f.timestamps.pop_front();
-                /*you can think like that first one are not in last 1 second so remove it 
-                cause we only care about last 1 second packets number thats why pop from front*/
+        // 2. 1 second (1000ms) er purono packet gulo window theke remove kora hocche
+        long long cutoff = p.timestamp_ms - TIME_WINDOW_MS;
+        while (!f.history.empty() && f.history.front().timestamp < cutoff) {
+            int old_port = f.history.front().port;
+            
+            // Purono port er count komano hocche
+            f.port_counts[old_port]--;
+            
+            // Jodi kono port er count 0 hoye jay, map theke kete deya hocche
+            if (f.port_counts[old_port] == 0) {
+                f.port_counts.erase(old_port);
             }
-        } // new one are added at back and old one are removed from front if it's not in the last 1 second
+            f.history.pop_front();
+        } 
     
-
-        
-        if (f.timestamps.size() > DOS_THRESHOLD) {
+        // 3. DoS Detection (1 second er moddhe total packet count)
+        if (f.history.size() > DOS_THRESHOLD) {
+            cout << "\033[2K\r" << RED << BOLD << "[IDS ALERT] DoS Attack detected from " << p.srcIP << RESET << endl;
             return true; 
+        }
+
+        // 4. Port Scan Detection (1 second er moddhe unique port er count)
+        if (f.port_counts.size() > PORT_SCAN_THRESHOLD) {
+            cout << "\033[2K\r" << YELLOW << BOLD << "[IDS ALERT] Port Scan detected from " << p.srcIP << RESET << endl;
+            
+            // Alert deyar por data clear kore deya holo jate bar bar same alert na ase
+            f.port_counts.clear(); 
+            f.history.clear(); 
+            return true;
         }
 
         return false;
     }
 }
-
-
-// for tesing ids manually send manual packets using this cmd
-// sudo hping3 -c 1500 -i u500 -I lo 127.0.0.1
