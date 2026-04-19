@@ -22,8 +22,6 @@ int main() {
     cout << CYAN << "Enter Network Interface: " << RESET;
     cin.getline(device, sizeof(device));
 
-    Blockchain::init();
-
     // Run sniffer
     thread captureThread([&]() {
         startCapture(device);

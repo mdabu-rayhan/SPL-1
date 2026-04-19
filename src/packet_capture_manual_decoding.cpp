@@ -8,6 +8,7 @@
 #include "../include/packet.h"
 #include "../include/packet_capture_manual.h"
 #include "../include/firewall.h"
+#include "../include/blockchain.h"
 #include "../include/ids.h"
 #include "../include/stats.h"
 #include "../include/color.h"
@@ -137,13 +138,12 @@ void packetHandler(u_char*, const pcap_pkthdr* header, const u_char* packet) {
 
 void startCapture(const char* device) {
 
-    // Initialize firewall & stats
-    //loadRules("/home/kali/Desktop/SPL-1/data/rules.txt");
-    if (!loadRules("/home/kali/Desktop/SPL-1/data/rules.txt")) { 
+    if (!loadRules("data/rules.txt")) { 
          cerr << RED << "Failed to load rules! Defaulting to deny all." << RESET << endl;
     }
     initUI(); // Initialize Stats UI
     IDS::init(); //Initialize IDS
+    Blockchain::init(); //Initialize Blockchain
 
     char errbuf[PCAP_ERRBUF_SIZE];
     global_handle = pcap_open_live(device, 65535, 1, 1000, errbuf);

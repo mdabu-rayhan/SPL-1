@@ -1,7 +1,413 @@
 --------------------------------------------------
 Block Index: 0
-Timestamp  : Sun Apr 19 17:15:37 2026
+Timestamp  : Sun Apr 19 17:37:14 2026
 Data       : Genesis Block - Network Monitor Started
 Prev Hash  : 000md0000000abu00000000rayhan000
-Hash       : ea287c6f46aceabed10065654da810bad2891d7067c1afe2c6e91dde6f49f53540b1d0d165f48ec063be687aa27127d04ac55bb6af12040498c3c6510f2db914
+Hash       : 74543f2fc19b984244b44db92334e8f5218df51f501dd1d799c3874933394e19a672ed4dabcfed2728516800e1311b3ba055ea4f0e5cf437951a6748009ea6c
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 1
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [BLOCK] | OTHER :0 -> :0
+Prev Hash  : 74543f2fc19b984244b44db92334e8f5218df51f501dd1d799c3874933394e19a672ed4dabcfed2728516800e1311b3ba055ea4f0e5cf437951a6748009ea6c
+Hash       : fa5f766b5a086716c9d743f7dffee4651a7beb31c7dc9ffffb8e71845cd137be7780ad60049920ddcd254db9f4e4911e7768227bd76facfa2128899b141b405
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 2
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.92:35173 -> 192.168.1.1:53
+Prev Hash  : fa5f766b5a086716c9d743f7dffee4651a7beb31c7dc9ffffb8e71845cd137be7780ad60049920ddcd254db9f4e4911e7768227bd76facfa2128899b141b405
+Hash       : 4e1f5fb34cea696c68951e0a58602584caa95f9abbb429c9da3ce836b26518d16eacd862b5310ca16b39c60d9f55d4a7782c05d10c7941d56073016b02b443b
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 3
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.92:43037 -> 192.168.1.1:53
+Prev Hash  : 4e1f5fb34cea696c68951e0a58602584caa95f9abbb429c9da3ce836b26518d16eacd862b5310ca16b39c60d9f55d4a7782c05d10c7941d56073016b02b443b
+Hash       : 35a317cf6c87c00ec8466f1aaae27b7fbada5eb6b73ec656b2c9c93d1c9a3502a9211cc9e11bdd78f07afbffc9008eb2cb6d321524a5e0c39e74e27620e6fb2
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 4
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.1:53 -> 192.168.1.92:43037
+Prev Hash  : 35a317cf6c87c00ec8466f1aaae27b7fbada5eb6b73ec656b2c9c93d1c9a3502a9211cc9e11bdd78f07afbffc9008eb2cb6d321524a5e0c39e74e27620e6fb2
+Hash       : e2c0875ddd4abad42f80531c896f6c18eeb3db3f0a31cd2d4e10877173f7f195641cabc28fd664fc7501646a5c5a0bc6003e9f5fa799d99857e813302ab23ff
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 5
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : e2c0875ddd4abad42f80531c896f6c18eeb3db3f0a31cd2d4e10877173f7f195641cabc28fd664fc7501646a5c5a0bc6003e9f5fa799d99857e813302ab23ff
+Hash       : 8d04ce3decc30981a829dd8177346ebd94fc9328f94a37001941511911375d74ee09eb81c7ea00a3a1e42c32ff9b60895e745c7488a22d6888d7ef9374a8e7a7
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 6
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.1:53 -> 192.168.1.92:35173
+Prev Hash  : 8d04ce3decc30981a829dd8177346ebd94fc9328f94a37001941511911375d74ee09eb81c7ea00a3a1e42c32ff9b60895e745c7488a22d6888d7ef9374a8e7a7
+Hash       : 7b553663a0731ea5eb69baf17c59630198ad2462f32dd8527c55f0ef25445b0b3921a76424281b8ea594700b57b81bdb7ac04e7378d894e1d0dab44c320e4a2
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 7
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 7b553663a0731ea5eb69baf17c59630198ad2462f32dd8527c55f0ef25445b0b3921a76424281b8ea594700b57b81bdb7ac04e7378d894e1d0dab44c320e4a2
+Hash       : 98b9febb07b33f3e8d11132b56693a8f51165473718a3161763eb727fee149cb5537fb5e4590e21952d364fae8a7c049c91d8bd4d88d2ef84424a2b1a968068c
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 8
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 98b9febb07b33f3e8d11132b56693a8f51165473718a3161763eb727fee149cb5537fb5e4590e21952d364fae8a7c049c91d8bd4d88d2ef84424a2b1a968068c
+Hash       : 7e36bdb0c2f00099a05f1913cef7a4a9bdd254c81510d6e09f9de4f5e23d83296cfa03e5acd37cabd8af4ea1057dff85b21b12a3a224e79e8072f1ab7105134
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 9
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 7e36bdb0c2f00099a05f1913cef7a4a9bdd254c81510d6e09f9de4f5e23d83296cfa03e5acd37cabd8af4ea1057dff85b21b12a3a224e79e8072f1ab7105134
+Hash       : 2e009afe39e621616fcaff25065e70474f9ff13d31c080b2766492860bdb4f54d7ab7ba616cf29bb48e78eade23a211bdd58974376805ca81d4393e6095ec97e
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 10
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 2e009afe39e621616fcaff25065e70474f9ff13d31c080b2766492860bdb4f54d7ab7ba616cf29bb48e78eade23a211bdd58974376805ca81d4393e6095ec97e
+Hash       : 7913c49be0f61055d0568949fad4aaea28fbd771d9385d99c599deddb22e135fef3bf4cba9ec3863edea4c61927094a1687ec4326aa02bc698d9b28aad7796f
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 11
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 7913c49be0f61055d0568949fad4aaea28fbd771d9385d99c599deddb22e135fef3bf4cba9ec3863edea4c61927094a1687ec4326aa02bc698d9b28aad7796f
+Hash       : 5719526c4c16b547957d0132ced9e4efc2aeb3c87df7787cb6029980d50a79fae07ad84c95fbb2b135e83c72d766977fc3c9fe7a4c0b4a2b2862d1355caff011
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 12
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 5719526c4c16b547957d0132ced9e4efc2aeb3c87df7787cb6029980d50a79fae07ad84c95fbb2b135e83c72d766977fc3c9fe7a4c0b4a2b2862d1355caff011
+Hash       : d41797aeb70be0c67e8896b0537fee75a0a5a65dbae8d55c9c60ddf42538f07bcdc6cbe8173f18c33144fd91f7606549c628e258173f46f9ea156a3deeef3c23
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 13
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : d41797aeb70be0c67e8896b0537fee75a0a5a65dbae8d55c9c60ddf42538f07bcdc6cbe8173f18c33144fd91f7606549c628e258173f46f9ea156a3deeef3c23
+Hash       : 198ca06299c3f0605904c538937f23dbb6554b63d31d4a68c5c55c05acaa3d0398062e3926a7d3ba4b8d15bd7ed7504b13ffc279595acd92d07f71cc8361f9
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 14
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 198ca06299c3f0605904c538937f23dbb6554b63d31d4a68c5c55c05acaa3d0398062e3926a7d3ba4b8d15bd7ed7504b13ffc279595acd92d07f71cc8361f9
+Hash       : 1a1cf61fa514f2a7f5bf12ba9de74652293bcf57a99da3b275b60f090c1f74e89192f0b68358af426b234b96d39a78841421d2ac6f21f9835011ad6ba22bf872
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 15
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.92:59026 -> 192.168.1.1:53
+Prev Hash  : 1a1cf61fa514f2a7f5bf12ba9de74652293bcf57a99da3b275b60f090c1f74e89192f0b68358af426b234b96d39a78841421d2ac6f21f9835011ad6ba22bf872
+Hash       : 7b2d6dc1dc131cd196e7fc69ff0b68fd3c095e6d269bb03dfd450521f085d3492474bab3aec2df57dc37d434ec5a025ad0924d095a955e114be0650878fcaa51
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 16
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.92:59026 -> 192.168.1.1:53
+Prev Hash  : 7b2d6dc1dc131cd196e7fc69ff0b68fd3c095e6d269bb03dfd450521f085d3492474bab3aec2df57dc37d434ec5a025ad0924d095a955e114be0650878fcaa51
+Hash       : 563ddd0d78509360260e3b91adf41bc2555f34c3064f6998e6da43e66b6810db62ec7ca6ea63139e93c66582d27272ffbe77e3b46682107c58ac8011165c878a
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 17
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.1:53 -> 192.168.1.92:59026
+Prev Hash  : 563ddd0d78509360260e3b91adf41bc2555f34c3064f6998e6da43e66b6810db62ec7ca6ea63139e93c66582d27272ffbe77e3b46682107c58ac8011165c878a
+Hash       : 5384df7bf8701d43f157f21f29fb153cefa1023f45f2cd10512e104afb2f9d0ee518b302dc5b34f6f80833c4b6cffdf55be34c120ffeecfbd25ca5699f7ec0d9
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 18
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | UDP 192.168.1.1:53 -> 192.168.1.92:59026
+Prev Hash  : 5384df7bf8701d43f157f21f29fb153cefa1023f45f2cd10512e104afb2f9d0ee518b302dc5b34f6f80833c4b6cffdf55be34c120ffeecfbd25ca5699f7ec0d9
+Hash       : 8455c4249e8045187312e6b6364d8b696619381f2b8057ee12ba97dd25e4ea5f34c39e75cf402545c61d75197b75dc1cd479540527e1b90ca5ca6d81ffa73d7e
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 19
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 8455c4249e8045187312e6b6364d8b696619381f2b8057ee12ba97dd25e4ea5f34c39e75cf402545c61d75197b75dc1cd479540527e1b90ca5ca6d81ffa73d7e
+Hash       : 2fa877c39a3f15f315d2b72e200859d9ffb43b9ee1cfaff2199d8989154d769952a036a0cfff1d129c5ec5cf5a42c93bb70a013688cf46be333a0d381381ed5
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 20
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 2fa877c39a3f15f315d2b72e200859d9ffb43b9ee1cfaff2199d8989154d769952a036a0cfff1d129c5ec5cf5a42c93bb70a013688cf46be333a0d381381ed5
+Hash       : 587be11b77f845f749c3c6b669191e25cf2b125b4669499aecf81fef9aef5788939fc271b0d22bd65a9b91a575f31bfbe28ab1cfc8124acc14e54e1e3c8b3
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 21
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 587be11b77f845f749c3c6b669191e25cf2b125b4669499aecf81fef9aef5788939fc271b0d22bd65a9b91a575f31bfbe28ab1cfc8124acc14e54e1e3c8b3
+Hash       : 21ce16c1672c2f14b838a4fbf4ac9c0870041319d44495bc4c01580cb957776b7599a1654a156b84ab2a0b8b21c75a7585a787d4aa21bb184e74654175771a5
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 22
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 21ce16c1672c2f14b838a4fbf4ac9c0870041319d44495bc4c01580cb957776b7599a1654a156b84ab2a0b8b21c75a7585a787d4aa21bb184e74654175771a5
+Hash       : d3dfcb6c8f133b9193375304d9acb07047421b4a18f9243074c2aea941b1dcc0f8da87a0d81f388ca00cd8cfacccbb2995bc8510caabe2b2ce239542a5f9c55d
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 23
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : d3dfcb6c8f133b9193375304d9acb07047421b4a18f9243074c2aea941b1dcc0f8da87a0d81f388ca00cd8cfacccbb2995bc8510caabe2b2ce239542a5f9c55d
+Hash       : 9d6964f8f95625244974c4b2c3ed76e172e8b5298e3b601bc0258fefc97865d5866f87478a77303ebae82f83fe96236da8973020839dc20fa1c5c673c5b7a7e
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 24
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 9d6964f8f95625244974c4b2c3ed76e172e8b5298e3b601bc0258fefc97865d5866f87478a77303ebae82f83fe96236da8973020839dc20fa1c5c673c5b7a7e
+Hash       : 156c4fa2ad4eddd5127c8071cfa7670975f4a40d66ae47bf335ed6282eb624304a1fef41c13053b4b15d93faf24aeb547092242c761d6ef8649084f3ca01a24
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 25
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 156c4fa2ad4eddd5127c8071cfa7670975f4a40d66ae47bf335ed6282eb624304a1fef41c13053b4b15d93faf24aeb547092242c761d6ef8649084f3ca01a24
+Hash       : cda7cf7d57ae9e4d75e8b15861b6c7a7218b1349645bb9404493b1c5b4714eee9b52218c1d2381d54b51e9b136f55685b3dbdea0b72dd3de49a77c33f54a98eb
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 26
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : cda7cf7d57ae9e4d75e8b15861b6c7a7218b1349645bb9404493b1c5b4714eee9b52218c1d2381d54b51e9b136f55685b3dbdea0b72dd3de49a77c33f54a98eb
+Hash       : 52b45fc46cdb333112c798dac53b993d84b94d96ff36195318657f5273245e3ffeb4c46e27b1621e64df5200d594661ee77244329bfedf90d1e042617c98
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 27
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 52b45fc46cdb333112c798dac53b993d84b94d96ff36195318657f5273245e3ffeb4c46e27b1621e64df5200d594661ee77244329bfedf90d1e042617c98
+Hash       : 46f121a0af3204ebe8e568abcc94d530e744268fdee184cd7669d384d41e6e79dd052dabc42f9721c7ef0c3db4ed1145baf4193c8e56453b73106c737d00fe3f
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 28
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 46f121a0af3204ebe8e568abcc94d530e744268fdee184cd7669d384d41e6e79dd052dabc42f9721c7ef0c3db4ed1145baf4193c8e56453b73106c737d00fe3f
+Hash       : 675cf9b62b08516729a1bb460eb2561482b889de896b2a681079d7fecc2091b2672171773d8255706a5d213ebb01eb6ae923bc9c1ce4602e2bd413681abc4c3b
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 29
+Timestamp  : Sun Apr 19 17:37:15 2026
+Data       : Sun Apr 19 17:37:15 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 675cf9b62b08516729a1bb460eb2561482b889de896b2a681079d7fecc2091b2672171773d8255706a5d213ebb01eb6ae923bc9c1ce4602e2bd413681abc4c3b
+Hash       : 4eed6e23dfb59233e801f474192f8262e9c6826654174d4faa52a84648d82d45e9ae49184eebe38552a6ef33ad6569ec1669684b217948f7c5cb0072bfcb2b65
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 30
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 4eed6e23dfb59233e801f474192f8262e9c6826654174d4faa52a84648d82d45e9ae49184eebe38552a6ef33ad6569ec1669684b217948f7c5cb0072bfcb2b65
+Hash       : b2623c7bc5044e82e16b3c3282ff67e9270e3c4d0ced45f512cd42882eae147c70408420bf1fd5babee12de12d9acfe5ca3b567c4eb26811cc59bee5a40c7c1
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 31
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : b2623c7bc5044e82e16b3c3282ff67e9270e3c4d0ced45f512cd42882eae147c70408420bf1fd5babee12de12d9acfe5ca3b567c4eb26811cc59bee5a40c7c1
+Hash       : be30f26ed4fed1219c0ca15cfa90d76a0a69d92eff0da2ae84de2e1d1bbb1b635c90ee8e18059643768e783d7ce4ce0bb2605a0711dc6b562a6a9e9e6962588
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 32
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : be30f26ed4fed1219c0ca15cfa90d76a0a69d92eff0da2ae84de2e1d1bbb1b635c90ee8e18059643768e783d7ce4ce0bb2605a0711dc6b562a6a9e9e6962588
+Hash       : 15dfaf44678f71ce2a7bebcbdc9c3e6de3d2eef843df20cd8492e645045a2baea8fcb41f13ab7a12befc3d8243fb2118f79250e97db7fa00374bce5979e87198
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 33
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 15dfaf44678f71ce2a7bebcbdc9c3e6de3d2eef843df20cd8492e645045a2baea8fcb41f13ab7a12befc3d8243fb2118f79250e97db7fa00374bce5979e87198
+Hash       : 41f47bd313207d05b7d28970fe2c6d15d5a839572c345e487cfc56a0a1aa669d559129f548d5306a373608c9283a616f807f6b410a293af9a4795f1a145bea2a
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 34
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 41f47bd313207d05b7d28970fe2c6d15d5a839572c345e487cfc56a0a1aa669d559129f548d5306a373608c9283a616f807f6b410a293af9a4795f1a145bea2a
+Hash       : 86cb874db870095b52724afdbf271175912fe2361de017ee5f6c86b68f0d2a329960c1a6e565e5bcb42710bc3db55516a1d396e4a6e53a2266bd2c90989fb7cc
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 35
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 86cb874db870095b52724afdbf271175912fe2361de017ee5f6c86b68f0d2a329960c1a6e565e5bcb42710bc3db55516a1d396e4a6e53a2266bd2c90989fb7cc
+Hash       : e8de3fac2717235c53e05ee97538d19fb866577ea07f731c69defec6db16df3aa0f1b47d8a2fb7ce939d8e643d5237e78c8229285ee2683792a7488d4329fc
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 36
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : e8de3fac2717235c53e05ee97538d19fb866577ea07f731c69defec6db16df3aa0f1b47d8a2fb7ce939d8e643d5237e78c8229285ee2683792a7488d4329fc
+Hash       : 55150b71336eaed94639fc47e305c05778286bf8e95d6a7deaf939f8af522d924ae460177656e4039bb91cd5dd5394d3b4d600fc6f1126bbf789276e953a6814
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 37
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:40164 -> 13.107.5.93:443
+Prev Hash  : 55150b71336eaed94639fc47e305c05778286bf8e95d6a7deaf939f8af522d924ae460177656e4039bb91cd5dd5394d3b4d600fc6f1126bbf789276e953a6814
+Hash       : 2cc43f8786f8294cc6c7cf3cbafd1a27317e19c681b49846f40ef24317a77cbbbec705db99867cacf1655ddb5cc8dccd66e1d7701385e7226368b512abdf261
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 38
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 13.107.5.93:443 -> 192.168.1.92:40164
+Prev Hash  : 2cc43f8786f8294cc6c7cf3cbafd1a27317e19c681b49846f40ef24317a77cbbbec705db99867cacf1655ddb5cc8dccd66e1d7701385e7226368b512abdf261
+Hash       : 2dbc037ab24b1d30e6a0a4554e6d86f5fab0e770bef67cb7eedcbeb0f3de379e68ecd6f04a691e1f5f3f786da25a8f9142d09f1977fbe0d0f031821a4600a8c9
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 39
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [BLOCK] | OTHER :0 -> :0
+Prev Hash  : 2dbc037ab24b1d30e6a0a4554e6d86f5fab0e770bef67cb7eedcbeb0f3de379e68ecd6f04a691e1f5f3f786da25a8f9142d09f1977fbe0d0f031821a4600a8c9
+Hash       : ea407cbee42601889c4cb3eeb8028f49caabe2d02ce96ae8f2c5808757cdce4b4aea481db5978e918df04d6cde2106e9f19b9335f0a60ca7be789bc174d6ee9
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 40
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : ea407cbee42601889c4cb3eeb8028f49caabe2d02ce96ae8f2c5808757cdce4b4aea481db5978e918df04d6cde2106e9f19b9335f0a60ca7be789bc174d6ee9
+Hash       : 5644b9b4e7afb00a19ec4af26c8bab3536bb9893f2a3d7c5a4f5baa358158a3a60b310ece71b58bb67bf8bc0b3b439ee319f96c967f40e0e1ca6d131c5e3e19b
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 41
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 5644b9b4e7afb00a19ec4af26c8bab3536bb9893f2a3d7c5a4f5baa358158a3a60b310ece71b58bb67bf8bc0b3b439ee319f96c967f40e0e1ca6d131c5e3e19b
+Hash       : 25a14f78c69bc80663a0e350a8e717ebdb8a181be6a741b4f9154c71ddd6bb5a9132d63942aa0ae24df5263cdb0285047ead2808b2725b1a02fba63f98afedb
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 42
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 25a14f78c69bc80663a0e350a8e717ebdb8a181be6a741b4f9154c71ddd6bb5a9132d63942aa0ae24df5263cdb0285047ead2808b2725b1a02fba63f98afedb
+Hash       : ec96b323664e38123c5719567c57c7d6de42056b78735a2d9a09b6f857efa15dc07d9b6036852b87e48020f604db1c226932849d5d8dcdb478ca2ef64561339
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 43
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : ec96b323664e38123c5719567c57c7d6de42056b78735a2d9a09b6f857efa15dc07d9b6036852b87e48020f604db1c226932849d5d8dcdb478ca2ef64561339
+Hash       : 42a8f24802af2d97129f1ff1db629a9fab9da801346a7237ed8cc0afce7c4969429e3948dad76da696af21fc0d2f1d93322b9617cadf2bccbc2ef71efd276e
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 44
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 42a8f24802af2d97129f1ff1db629a9fab9da801346a7237ed8cc0afce7c4969429e3948dad76da696af21fc0d2f1d93322b9617cadf2bccbc2ef71efd276e
+Hash       : c76ae2732908060f898a114ffe8b5a35385bbc82e04b5c6428c42dc4e4539f732add29405e337357efd050a96114941eecbccc2d9126c8664c65cafebbffa784
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 45
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : c76ae2732908060f898a114ffe8b5a35385bbc82e04b5c6428c42dc4e4539f732add29405e337357efd050a96114941eecbccc2d9126c8664c65cafebbffa784
+Hash       : 1e43bd5accda5941e54a0a7e2a8312fb71d984d871ce532257a7c19b380b5bcd19f0b410694617d95b93c4f80e7aec14ec3654886f3f2efdbf4d068963bc8def
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 46
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 1e43bd5accda5941e54a0a7e2a8312fb71d984d871ce532257a7c19b380b5bcd19f0b410694617d95b93c4f80e7aec14ec3654886f3f2efdbf4d068963bc8def
+Hash       : e295afe6b6720cc6a87274a0629c3e17947262b6ce90219829e671e185c43ab45f410606b77702f5297ebd65bb3bbab55918ff308be12b0cbf41071683813b4a
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 47
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : e295afe6b6720cc6a87274a0629c3e17947262b6ce90219829e671e185c43ab45f410606b77702f5297ebd65bb3bbab55918ff308be12b0cbf41071683813b4a
+Hash       : f4a7ea511614cfac8a59990b1246b2bad0d0b09c2462153df91a09acad0ddbe643b5fdfb450d939c8863abb153a4f504fdaadb91b08059184ff0909cbc020866
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 48
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : f4a7ea511614cfac8a59990b1246b2bad0d0b09c2462153df91a09acad0ddbe643b5fdfb450d939c8863abb153a4f504fdaadb91b08059184ff0909cbc020866
+Hash       : 8189e54800b0e9be7f071c32a76e2b3a995c538000f722b4b2cf3c57f7a5dfee37878fcada46be3a48093a972673af58f07fadd7a49f68bda7d3db4eb4efcd92
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 49
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 8189e54800b0e9be7f071c32a76e2b3a995c538000f722b4b2cf3c57f7a5dfee37878fcada46be3a48093a972673af58f07fadd7a49f68bda7d3db4eb4efcd92
+Hash       : 66ee1be7a0aebb47d5c19ba6bcaad6b8c5249abf4c6115e3827d7c8df3e48add9eb841539f40cea5a9f8c58e71cfe0f487027a2ea58119831567a23953b38a23
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 50
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 66ee1be7a0aebb47d5c19ba6bcaad6b8c5249abf4c6115e3827d7c8df3e48add9eb841539f40cea5a9f8c58e71cfe0f487027a2ea58119831567a23953b38a23
+Hash       : b6df0036a50ef1b1de7b09d63e6703021046077d97c0c984be88c8debffe12b2b9939058a96de19c419a8b53ffe04d11dfca95bf0e3897094e11dd0db2baa2d3
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 51
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : b6df0036a50ef1b1de7b09d63e6703021046077d97c0c984be88c8debffe12b2b9939058a96de19c419a8b53ffe04d11dfca95bf0e3897094e11dd0db2baa2d3
+Hash       : 5c19f3cc96ce91cbb0219345355e240c644567a9ca88ec9c8e049a53c6b3d5da50fc54e6d637340eff52fe1415742b84fba6d2e225ecd571040442b32a989f6
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 52
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 5c19f3cc96ce91cbb0219345355e240c644567a9ca88ec9c8e049a53c6b3d5da50fc54e6d637340eff52fe1415742b84fba6d2e225ecd571040442b32a989f6
+Hash       : 6ae7019dbaa76ace2fa7f7fc8a0332b863eeb71b1aa95f33b25b4f5b0e12646df9f71ecc13098cf28ab20b69d718b0d22239eaa84e3d8100f78873609cd384ef
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 53
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 6ae7019dbaa76ace2fa7f7fc8a0332b863eeb71b1aa95f33b25b4f5b0e12646df9f71ecc13098cf28ab20b69d718b0d22239eaa84e3d8100f78873609cd384ef
+Hash       : 8e9eee46c3b00936dc9e0800cb4fd9c74a7d24871222c711d4504284739875892b94f042e190eaa855e52e52693734cd8005fb1be332f1b6e260f1c8b8cee2d9
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 54
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 8e9eee46c3b00936dc9e0800cb4fd9c74a7d24871222c711d4504284739875892b94f042e190eaa855e52e52693734cd8005fb1be332f1b6e260f1c8b8cee2d9
+Hash       : 109783a4bfdd1eadfc3c136060511074620774cbbd892360e9f331e19eab5d54c14a85f144548cae41888c2336646468c0e1ebb5d46dc009cd65ebcacb09e80d
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 55
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 109783a4bfdd1eadfc3c136060511074620774cbbd892360e9f331e19eab5d54c14a85f144548cae41888c2336646468c0e1ebb5d46dc009cd65ebcacb09e80d
+Hash       : 4edd4a9c3fd594693893228ccb00fd4a95298ba23b0069c9129479c35a8d6b4b6241cb5562a13b226fa58d4191464217e805b1657d42f94090ebaf437da004d4
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 56
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 4edd4a9c3fd594693893228ccb00fd4a95298ba23b0069c9129479c35a8d6b4b6241cb5562a13b226fa58d4191464217e805b1657d42f94090ebaf437da004d4
+Hash       : 7ed3bf17ee825a6018a9a3afb31ac0e3884ec4e2b44f6e49505e059eb061ce208d45d3f0df8396263721202f91f59c6cc834dbe7e89bc5eed529331451c5dc33
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 57
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 192.168.1.92:45358 -> 140.82.114.22:443
+Prev Hash  : 7ed3bf17ee825a6018a9a3afb31ac0e3884ec4e2b44f6e49505e059eb061ce208d45d3f0df8396263721202f91f59c6cc834dbe7e89bc5eed529331451c5dc33
+Hash       : 505b4bc0e002509f4101ef110bfaf9b6b1828b90fbe60a998f39770a6fd3a9114166cf5285f768eb7ed7023ddfd2556a851825c2a26a6d6d94b14cc1c6d29e3
+--------------------------------------------------
+--------------------------------------------------
+Block Index: 58
+Timestamp  : Sun Apr 19 17:37:16 2026
+Data       : Sun Apr 19 17:37:16 2026 | [ALLOW] | TCP 140.82.114.22:443 -> 192.168.1.92:45358
+Prev Hash  : 505b4bc0e002509f4101ef110bfaf9b6b1828b90fbe60a998f39770a6fd3a9114166cf5285f768eb7ed7023ddfd2556a851825c2a26a6d6d94b14cc1c6d29e3
+Hash       : 3d183d207ee63ab4776fc2a9e39f692d4bfca013fdf03333d9301c0a94bc2a81a858e870b8c9efcec34834b24018ccf143fd0f37849500e4ee910cd31c75685
 --------------------------------------------------
