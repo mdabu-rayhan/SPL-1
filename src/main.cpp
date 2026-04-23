@@ -1,28 +1,25 @@
-// src/main.cpp er update
 #include <iostream>
 #include <thread>
-#include <string> // string use korar jonno
+#include <string> 
 
 #include "../include/packet_capture_manual.h"
 #include "../include/firewall.h"
 #include "../include/stats.h"
 #include "../include/color.h"
-#include "../include/blockchain.h" // Blockchain check korar jonno add kora holo
+#include "../include/blockchain.h" 
 
 using namespace std;
 
 void startCapture(const char* device);
 void stopCapture();
 
-extern void initUI();
 
 int main() {
     
-    char device[100]; // = "eth0";   // or "wlan0" / eth0
+    char device[100]; // "wlan0", "eth0"
     cout << CYAN << "Enter Network Interface: " << RESET;
     cin.getline(device, sizeof(device));
 
-    // Run sniffer
     thread captureThread([&]() {
         startCapture(device);
     });
@@ -35,14 +32,11 @@ int main() {
     stopCapture();     
     captureThread.join();
 
-    // ==========================================
-    // Immutability Check (New Feature)
-    // ==========================================
     cout << YELLOW << "\nDo you want to check logfile immutability? (yes/no): " << RESET;
     string choice;
     getline(cin, choice);
 
-    if (choice == "yes" || choice == "y" || choice == "Y" || choice == "Yes") {
+    if (choice == "yes") {
         cout << CYAN << "\nVerifying Blockchain Integrity...\n" << RESET << endl;
         
         if (Blockchain::verifyChain()) {
@@ -55,3 +49,13 @@ int main() {
     cout<< GREEN << "\n                                Program finished.\n" << RESET;
     return 0;
 }
+
+
+
+/*
+nmap -p 1-100 --min-rate 100 127.0.0.1
+
+sudo hping3 -c 1500 -i u500 -I lo 127.0.0.1
+
+curl http://127.0.0.1 and ping -c 3 127.0.0.1
+*/

@@ -15,7 +15,7 @@
 
 using namespace std;
 
-// Global handle for stopping
+
 pcap_t* global_handle = nullptr;
 
 uint16_t read_u16(const u_char* data) {
@@ -73,7 +73,7 @@ Packet parseRaw(const u_char* packet, int len) {
         pkt.dstPort = read_u16(transport + 2);
 
         if (transport[13] & 0x04) {
-            pkt.protocol = "IGNORE"; // Ignore outgoing reset packets
+            pkt.protocol = "IGNORE"; 
         }
 
     // UDP 
@@ -91,7 +91,7 @@ Packet parseRaw(const u_char* packet, int len) {
         uint8_t icmp_type = transport[0];
 
         if (icmp_type == 0 || icmp_type == 3) {
-            pkt.protocol = "IGNORE"; // Ignore outgoing echo replies & dest unreachable
+            pkt.protocol = "IGNORE";
         }
 
 
@@ -110,7 +110,7 @@ void packetHandler(u_char*, const pcap_pkthdr* header, const u_char* packet) {
         return;
     }
 
-    // 1. Run Firewall Checks
+    // 1. Run Firewall 
     Decision d = evaluatePacket(pkt);
 
     if (!d.allowed) {
@@ -119,7 +119,7 @@ void packetHandler(u_char*, const pcap_pkthdr* header, const u_char* packet) {
     }
 
 
-    // 2. Run IDS (DoS Detection)
+    // 2. Run IDS 
     bool isDoS = IDS::analyze(pkt);
 
 
@@ -141,9 +141,11 @@ void startCapture(const char* device) {
     if (!loadRules("data/rules.txt")) { 
          cerr << RED << "Failed to load rules! Defaulting to deny all." << RESET << endl;
     }
-    initUI(); // Initialize Stats UI
-    IDS::init(); //Initialize IDS
-    Blockchain::init(); //Initialize Blockchain
+
+    // Initialize Stats UI, IDS, Blockchain
+    initUI();
+    IDS::init(); 
+    Blockchain::init(); 
 
     char errbuf[PCAP_ERRBUF_SIZE];
     global_handle = pcap_open_live(device, 65535, 1, 1000, errbuf);

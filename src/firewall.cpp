@@ -1,4 +1,3 @@
-// rule_engine.cpp
 #include "../include/firewall.h"
 #include "../include/color.h"
 #include <fstream>
@@ -10,11 +9,11 @@
 
 using namespace std;
 
-// Global variables 
+
 vector<Rule> rules;         
 mutex ruleLock;             // Protect rules vector
 
-// Load rules from file
+
 bool loadRules(const string &path) {
     lock_guard<mutex> guard(ruleLock);
 
@@ -50,7 +49,6 @@ bool loadRules(const string &path) {
 
 // Helper functions
 static bool matchIP(const string &ruleIP, const Packet &p) {
-    // Match IP
     return (ruleIP == "*" || ruleIP == p.srcIP || ruleIP == p.dstIP);
 }
 
@@ -93,11 +91,10 @@ void blockIP(const string &ip) {
     r.proto = "ANY";      
     r.ip = ip;            
     r.port = 0;           
-    r.raw = "DYNAMIC BLOCK (IDS ALERT)"; // Ekhane change kora holo
+    r.raw = "DYNAMIC BLOCK (IDS ALERT)";
 
     rules.insert(rules.begin(), r);
 
     cout << "\033[2K\r";
-    // Nicher print message ti generic kora holo
     cout << BOLD << "[Firewall] " << RED << "BLOCKED IP: " << ip << " due to Malicious Activity!" << RESET << endl;
 }
